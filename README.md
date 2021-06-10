@@ -6,8 +6,9 @@
 **Hi there ! :wave:**
 
 ![Cover](Fb.gif)
-
+<div align="center">
 ->Talk, Get help, Scrape!<-
+                            </div>
 
 ### **This is FellowBot - an MLH kickoff project, a bot and your friend!.**
 
