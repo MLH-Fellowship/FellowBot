@@ -7,7 +7,7 @@
 
 ![Cover](Fb.gif)
 <div align="center" style="height : 800px">
-Talk ⚫ Get help ⚫ Scrape!
+Talk 💠 Get help 💠 Scrape!
                             </div>
 
 ### **This is FellowBot - an MLH kickoff project, a bot and your friend!.**
