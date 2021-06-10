@@ -14,13 +14,13 @@ Talk 💠 Get help 💠 Scrape!
 We understand how sometimes life in particular can be difficult and since we are now MLH Fellows, we thought of making something which can be used by every fellow in the server and which makes their life easy.
 
 ## Table of contents :
-- [!Introduction](#introduction)
-- Techstack
-- Scalability
-- Installing
-- Contributing
-- Privacy and Security
-- What we are proud of 
+- [Introduction](#introduction)
+- [Techstack](#techstack)
+- [Scalability](#scalability)
+- [Installing](#installing)
+- [Contributing](#contributing)
+- [Privacy and security](#privacy-and-security)
+- [What we are proud of](#what-we-are-proud-of) 
 
 ## Introduction
 The project is a discord bot with the following features:
