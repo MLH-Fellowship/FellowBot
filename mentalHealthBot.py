@@ -1,5 +1,12 @@
-# # bot.py
-# import os
+#Google Calendar API imports
+from __future__ import print_function
+import datetime
+import os.path
+from googleapiclient.discovery import build
+from google_auth_oauthlib.flow import InstalledAppFlow
+from google.auth.transport.requests import Request
+from google.oauth2.credentials import Credentials
+
 import json
 import os
 import discord
@@ -21,6 +28,10 @@ from discord.ext import commands
 # load_dotenv()
 # TOKEN = os.getenv('DISCORD_TOKEN')
 
+# If modifying these scopes, delete the file token.json.
+SCOPES = ['https://www.googleapis.com/auth/calendar.readonly']
+
+
 # ---------------------BOT COMMAND
 bot = commands.Bot(command_prefix='!')
 # ---------------------WEB SCRAPING
@@ -35,8 +46,68 @@ helplines = ["Family Violence Prevention Center 1-800-313-1310",
              "GriefShare 1-800-395-5755",
              "Suicide Hotline 1-800-SUICIDE (784-2433)"]
 
+@bot.command(aliases=['event', 'nextevent', 'nextevents', 'upcomingevent', 'upcomingevents'], help='Get a list of the ongoing and upcoming events of the pod')
+async def events(ctx, count='1'):
+    creds = None
+    # The file token.json stores the user's access and refresh tokens, and is
+    # created automatically when the authorization flow completes for the first
+    # time.
+    if os.path.exists('token.json'):
+        creds = Credentials.from_authorized_user_file('token.json', SCOPES)
+    # If there are no (valid) credentials available, let the user log in.
+    if not creds or not creds.valid:
+        if creds and creds.expired and creds.refresh_token:
+            creds.refresh(Request())
+        else:
+            flow = InstalledAppFlow.from_client_secrets_file(
+                'credentials.json', SCOPES)
+            creds = flow.run_local_server(port=0)
+        # Save the credentials for the next run
+        with open('token.json', 'w') as token:
+            token.write(creds.to_json())
 
-#
+    service = build('calendar', 'v3', credentials=creds)
+
+    # Code to get the calendar id 
+
+    # page_token = None
+    # while True:
+    #     calendar_list = service.calendarList().list(pageToken=page_token).execute()
+    #     for calendar_list_entry in calendar_list['items']:
+    #         print(calendar_list_entry)
+    #     page_token = calendar_list.get('nextPageToken')
+    #     if not page_token:
+    #         break    
+
+    # Call the Calendar API
+    now = datetime.datetime.utcnow().isoformat() + 'Z' # 'Z' indicates UTC time
+    # print('Getting the upcoming', int(count), 'events')
+    events_result = service.events().list(calendarId='6hkc92l58daaolq2h0meri3m0g@group.calendar.google.com', timeMin=now,
+                                        maxResults=int(count), singleEvents=True,
+                                        orderBy='startTime').execute()
+    events = events_result.get('items', [])
+
+    if not events:
+        print('No upcoming events found.')
+        await ctx.send('No upcoming events found.')
+    else:
+        a = "Here's the list of upcoming/ongoing " + count + " event(s)"
+        await ctx.send(a)
+        for no, event in enumerate(events):
+            start = event['start'].get('dateTime', event['start'].get('date'))
+            end = event['end'].get('dateTime', event['end'].get('date'))
+            # print(start, event['summary'], event['location'], event['description'])
+            b = str(no+1) + ' - ' + event['summary']
+            await ctx.send(b)
+            c = 'Starts at: ' + start
+            await ctx.send(c)
+            d = 'Ends at: ' + end
+            await ctx.send(d)
+            e = 'Location: ' + event['location']
+            await ctx.send(e)
+            # await ctx.send(event['description'])
+
+
 @bot.command(name='faq', help='Searches the FAQ for the most relevant section corresponding to the provided keyword.')
 async def faq(ctx, keyword):
     for i in scraped["intents"]:
