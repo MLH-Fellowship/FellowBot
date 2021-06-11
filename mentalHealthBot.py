@@ -16,8 +16,7 @@ import random
 from keepalive import keepalive
 
 # enter token for the server
-TOKEN = os.getenv('DISCORD_TOKEN')
-# enter application id
+TOKEN = os.environ['DISCORD_TOKEN']
 
 # client = commands.Bot(command_prefix='.')
 
