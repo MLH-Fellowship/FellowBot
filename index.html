@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>FellowBot</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- stylesheet css -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/templatemo-style.css" />
+    <!-- google web font css -->
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <!-- navigation -->
+
+    <div class="container">
+        <div class="navbar navbar-default navbar-static-top" role="navigation">
+            <div class="navbar-header">
+                <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon icon-bar"></span>
+            <span class="icon icon-bar"></span>
+            <span class="icon icon-bar"></span>
+          </button>
+            </div>
+        </div>
+    </div>
+
+    <div id="home">
+        <div class="container">
+            <div class="row">
+                <div style="
+              text-align: center;
+              text-orientation: inherit;
+              margin-top: 200px;
+            ">
+                    <!-- <button type="button" class="btn btn-warning">
+              Invite to Server
+            </button> -->
+                    <a class="btn btn-primary" href="www.google.com" role="button" style="background: transparent">Scroll down for invite
+            </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <button>hello</button> -->
+    <div class="divider">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-sm-6">
+                    <div class="divider-wrapper divider-one">
+                        <i class="fa fa-laptop"></i>
+                        <h2>Mental Health Monitoring</h2>
+                        <p>
+                            We understand how stressful it can be to manage everything and keep a positive attitude. Come talk to FellowBot about stress, life and unwanted feelings and it will help you!.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="divider-wrapper divider-two">
+                        <i class="fa fa-mobile"></i>
+                        <h2>Event scheduler for Google</h2>
+                        <p>
+                            Events are MLHs' best friend but how to keep track of all that is happening ? Allow our bot to sync your calender with its own memory and provide you information about every event you have scheduled!
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-12">
+                    <div class="divider-wrapper divider-three">
+                        <i class="fa fa-life-ring"></i>
+                        <h2>Handbook Search</h2>
+                        <p>
+                            MLH's fellow's every answer lies in the handbook. But, how about eliminating the need to go to the website and search for each topic manually when you can simply type a keyword for it?
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Default input -->
+    <!-- <div style="margin-left: 630px">
+        <label for="exampleForm2" style="color: beige">Enter token id </label>
+        <input type="text" id="exampleForm2" class="form-control-sm" />
+    </div> -->
+    <div style="margin-left: 620px">
+        <input type="text" placeholder="Type your token id" id="inputId" style="margin-left: 10px" />
+        <div>
+            <ul></ul>
+        </div>
+        <button type="button" onclick="getInputValue();" class="btn btn-lg" style="background-color: rgb(81, 9, 109)">
+        <a id="my" style="color: aliceblue"> Invite to the server </a>
+      </button>
+        <script>
+            function getInputValue() {
+                // Selecting the input element and get its value
+                let inputVal = document.getElementById("inputId").value;
+
+                let x = "https://discord.com/api/oauth2/authorize?client_id=";
+                let y = "&permissions=2147997760&scope=bot";
+                let ok = x + inputVal + y;
+                // alert(typeof x);
+                document.getElementById("my").href = ok;
+                // alert(ok);
+            }
+        </script>
+        <div>
+            <ul>
+                <li></li>
+            </ul>
+        </div>
+        <a class="btn btn-primary btn-lg" href=""> Show me Github</a>
+    </div>
+
+    <div class="area">
+        <ul class="circles">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+    <!-- <script>
+        var ok = document.getElementById("exampleForm2").value;
+        
+        console.log(ok);
+        // document.getElementById("myLink").onclick = function() {
+        //     document.getElementById("abc").href = "ok";
+        //     return false;
+        // };
+    </script> -->
+</body>
+
+</html>
