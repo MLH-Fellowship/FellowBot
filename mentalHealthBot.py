@@ -178,7 +178,7 @@ async def on_message(message):
         await message.channel.send(response)
 
 # REPEATEDLY PING SERVER TO KEEP ALIVE
-keepalive()
+#keepalive()
 
 # ---------------------INITIALIZING THE BOT
 bot.run(TOKEN)
