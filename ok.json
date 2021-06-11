@@ -1,0 +1,270 @@
+{
+    "intents": [{
+            "tag": "mlh",
+            "responses": [
+                "hi, your mlh bot is working fine",
+                "this is sentence 2",
+                "this is sentence 3",
+                "this is sentence 3"
+            ],
+            "content_set": ""
+        },
+        {
+            "tag": "MLHintro",
+            "responses": [
+                "The MLH Fellowship is an educational program built to get you hands-on experience: opportunities to experience some of what it will be like to be a professional software engineer.",
+                " In order to do this, you’ll be collaborating with other fellows, pod leaders, and professional Mentors to contribute to the types of projects you'll encounter as a full-time software engineer in the future.",
+                "The MLH Fellowship is organized by Major League Hacking (MLH) with support from an amazing group of partners and sponsors.",
+                " Here are a few of the organizations you might encounter as a fellow: ",
+                "Major League Hacking (MLH) is a Public Benefit Corporation that empowers the next generation of technologists.",
+                " Each year, MLH facilitates thousands of events that foster connections and teach computer science skills to more than 100,000 community members worldwide.",
+                " MLH was founded by some of the earliest members of the modern hacker community.",
+                " GitHub is a development platform inspired by the way developers work.",
+                " From open source to business, GitHub allows people to host and review code, manage projects, and build software alongside 50 million developers.",
+                " It is the home for open source development and open source software. Through its Sponsors Program GitHub helps support open source contributors worldwide.",
+                "Raise.dev provides paid training and mentorship to software developers with an emphasis on production applications, team collaboration, and industry best practices.",
+                " All of our program mentors come from Raisedev."
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "pod",
+            "responses": [
+                "At the beginning of the program, fellows are placed into small groups called Pods,.",
+                " Fellows within the Pod collaborate on projects over the course of the program. Each pod contains around 10 students and is overseen by a Pod Leader, who is usually an alumni of the program.",
+                " Each Pod also has an assigned professional mentor, who is an expert software engineer with a single goal - helping you level up!",
+                "Pods are grouped by Fellows who will be collaborating on similar projects, with Pod Leaders and Mentors who are skilled in the technologies the projects are based in.",
+                "Pods are further grouped by timezone to ensure that podmates can collaborate easily.",
+                "Beyond scheduled project changes it is our intent not to change pods or projects for fellows.",
+                "If for any reason it does become necessary to do so, we may make changes."
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "MLHevents",
+            "responses": [
+                "Throughout the program we will organize a number of optional educational and fun activities for fellows.",
+                "Some events will be open to all fellows and others will be by invitation based on interests and availability.",
+                "We will announce events over email and on the fellowship Discord.",
+                "They will take place in a variety of timezones to maximize the number of fellows who are able to participate.",
+                " For workshops and speakers, we will do our best to record video so fellows who were not able to attend in real-time can still participate.",
+                "Speaker Series – We will be inviting speakers from a variety of backgrounds to come and address the fellows.",
+                "You can expect to hear from Open Source maintainers, professional developers, founders, investors, and community members. ",
+                "Hands-on Workshops – We’ll be running a number of hands-on workshops to help you gain experience with cutting edge technologies and some industry best practices.",
+                "Many of these will be from our MLH Localhost workshop program. Others will be sourced from the community.",
+                "Speaker Series – We will be inviting speakers from a variety of backgrounds to come and address the fellows.",
+                "You can expect to hear from Open Source maintainers, professional developers, founders, investors, and community members. ",
+                "Hands-on Workshops – We’ll be running a number of hands-on workshops to help you gain experience with cutting edge technologies and some industry best practices.",
+                "Many of these will be from our MLH Localhost workshop program. Others will be sourced from the community.",
+                "Mini-Events – We’ll organize a number of fun activities called mini-events where you’ll be able to learn new skills while taking a break from your normal day-to-day.",
+                "Discussions & Roundtables - We’ll be organizing a number of regular roundtables and discussions where you’ll be able to get together with fellows and mentors to talk about issues and technologies that you’re passionate about.",
+                "Hackathons – In addition to the official program hackathons, which are mandatory, Major League Hacking is organizing hackathons every weekend of the summer that you can optionally participate in.",
+                "Recruiting Events – If you’re actively looking for a job or internship or want help finding one in the future, we’ll be organizing a number of events that will help you polish up your resume and practice talking about yourself and projects.",
+                "We’ll even have some opportunities for you to meet potential employers.",
+                "Community Events (All Kinds) – In addition to the events we are organizing for fellows, you can take the initiative to organize events yourself.",
+                "Just reach out to a program admin with your idea and we’ll help promote it and put it on the official calendar."
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "pod",
+            "responses": [
+                "At the beginning of the program, fellows are placed into small groups called Pods,.",
+                "Fellows within the Pod collaborate on projects over the course of the program.",
+                "Each pod contains around 10 students and is overseen by a Pod Leader, who is usually an alumni of the program. Each Pod also has an assigned professional mentor, who is an expert software engineer with a single goal - helping you level up!",
+                "Pods are grouped by Fellows who will be collaborating on similar projects, with Pod Leaders and Mentors who are skilled in the technologies the projects are based in.",
+                " Pods are further grouped by timezone to ensure that podmates can collaborate easily.",
+                "Beyond scheduled project changes it is our intent not to change pods or projects for fellows. ",
+                "If for any reason it does become necessary to do so, we may make changes."
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "discord",
+            "responses": [
+                "We will be using Discord for realtime chat among Pods and across the entire fellowship.",
+                "When you first join Discord, you will need to review the server’s rules and accept them before you’ll gain access to the full server. ",
+                "announcements - This is where we will post important updates that are relevant to everyone in the fellowship.",
+                "This includes important information that you will need to act on and optional educational/fun events that you can participate in.",
+                " You should make a habit of reading all new posts in this channel on a daily basis.",
+                "ask-mlh - If you have a question about the program (note: your mentor is better equipped to answer questions about your project/Pod),",
+                " you can post it here if you think it would be helpful for other fellows to know the answer as well. ",
+                "If your question is specific to you alone, you should email help@fellowship.mlh.io instead.",
+                "general – Every fellow in the program can access this channel for general program chat.",
+                "Try to keep discussion in this channel relevant to the program and projects that you’re contributing to and use off-topic for unrelated conversion.",
+                "off-topic –  Every fellow in the program can access this channel for general chat unrelated to the program.",
+                "Memes and other fun content are allowed here as long as they adhere to the Discord server rules and MLH Code of Conduct.",
+                "introduce-yourself – When you first join the server, you should post here to introduce yourself to the entire community. ",
+                "We’d recommend covering your name, what country you live in, where you go to school, what Pod you’re in, and any interesting or fun facts about yourself.",
+                "feedback-requests – If you would like to request feedback on something to a broader audience than your Pod, this is the channel to post in.",
+                " This could be requests for code reviews, design decisions, your resume/portfolio, and anything in between.",
+                "Feedback can be both positive and constructive, but make sure you’re respectful of the other fellows when providing it.",
+                "Topics Section – This is a group of channels that you can use for fellowship-wide communication about specific technologies & interests. ",
+                "This can be anything from sharing interesting content to asking for help. Your mentor and the program admins have permission to add additional channels to the section.",
+                "Pod Section – Every Pod will have a set of channels that are only available to the fellows in that Pod and the mentors/admins. Each Pod will start with a general chat, help chat, and general voice chat. You should use the channels in this section for most of your day-to-day collaboration.",
+                "Your mentor has permission to add additional channels to this section as needed."
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "zoom",
+            "responses": [
+                "You will use Zoom for video chat during the program.",
+                "We use Zoom extensively at Major League Hacking and have the following tips to help you get the most out of it",
+                "Show up early – By default, your mentor’s Zoom rooms are joinable before the start of the meeting.",
+                " This is to ensure that everyone can get online at the scheduled time so events can start promptly.",
+                " Try to show up for scheduled meetings 2-3 minutes early when possible.",
+                "Turn on your video – As a remote program, we don’t get to see each other every day.",
+                "To make our meetings feel more personable, we ask that everyone turn on their video whenever possible.",
+                " We understand from time-to-time this might not be possible for every MLH Fellow, please don’t call attention to podmates who haven’t turned it on.",
+                "Mute yourself when you aren’t speaking – In order to minimize distractions and ensure that everyone participating can hear the speaker, we ask that you mute yourself when you are not actively speaking. ",
+                "Your computer may pick up background noise that you don’t notice but can be hugely distracting to other people.",
+                "Turn on Gallery View – Zoom has two different views that you can use during meetings – speaker and gallery. We recommend the Gallery view, which displays the videos of everyone in the meeting using a tiled grid.",
+                " You can enable Gallery view by following these instructions.",
+                "Use the Zoom Chat – Use the Zoom chat during meetings to show support and ask questions. You can message the entire group or an individual participant using the drop down menu. ",
+                "If your question is something you’ll want to reference after the call, post it in Discord instead of Zoom.",
+                "Use the Zoom Desktop Client – While Zoom does offer a browser based video conferencing solution, we would not recommend using it.",
+                " Instead, try to use the desktop client which is more reliable and efficient."
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "feedback",
+            "responses": [
+                "We’ll be asking you regularly to provide feedback on the contributions of your fellow Fellows.",
+                " This will take the form of regular code reviews which will serve both as a learning opportunity for you and for your podmates.",
+                " We will also ask you to provide feedback about working with each of your fellows and your mentor throughout the program."
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "remote",
+            "responses": [
+                "In order to successfully participate in this educational program, you will need access to a workspace that is conducive to a remote environment.",
+                " Since remote collaboration is new to many fellows, we wanted to share the following tips that may be useful:",
+                "Create & stick to a schedule. Our biggest tip for remote collaboration is to create a routine for yourself.",
+                " Try to start and end at the same time each day and let your mentor and Podmates know when that is.",
+                " This will help minimize distractions when you aren’t online and will keep you productive during the day.",
+                "Choose a dedicated workspace. We recommend selecting a specific room or surface where you’ll be consistently doing most of your collaboration. ",
+                "Since you’re likely working from home, this will help your brain associate this area with productive coding instead of your normal personal activities.",
+                "Limit distractions. Log out of your social media accounts and put yourself in an area where you won’t be interrupted regularly. Great code is often the result of intense focus.",
+                "Plan out your day ahead of time. At the beginning of your day, make a short list of what you hope to accomplish in the hours ahead. You’ll share this during your standup and it will be useful for keeping you on track. At the end of the day, look back on your list and check off the things you accomplished.",
+                "Take clear breaks. Schedule time for lunch and a few breaks throughout the day. When you are taking a break, it’s a good idea to post in your Pod’s Discord so people know they won’t be able to reach you. Just make sure to post again when you’re back!"
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "hackathonrules",
+            "responses": [
+                "Remember that hackathons are like marathons.",
+                "Some people go to compete but most people take part to better themselves and have fun. ",
+                "Whatever the reason is you're at a hackathon, make sure you're upholding the hacker spirit by collaborating with other teams, helping beginners, and having fun.",
+                "Only MLH Fellows in the current class may compete in the hackathon.",
+                "Teams must create a project that fits the theme presented at the beginning of each Hackathon. ",
+                "Teams should be composed of 2-4 fellows.",
+                "Teams can work on their submission starting at the end of their Pod's kickoff event until the start of their Pod's final demos.",
+                " Teams do not need to stay awake for the full hackathon and an all-nighter of that length is strictly discouraged.",
+                "Teams can of course gain advice and support from organizers, Pod Leaders, Mentors, volunteers, sponsors, fellows, and others.",
+                "To submit a project, the team must make the code available on GitHub with an appropriate Open Source license.",
+                "All work on a project should be done during the hackathon.",
+                "Teams can use an idea they had before the event. Teams can also work on an idea that they have worked on before (as long as they do not re-use code).",
+                "Teams can work on ideas that have already been done. Hacks do not have to be “innovative”.",
+                " If somebody wants to work on a common idea they should be allowed to do so and should be judged on the quality of their hack. ",
+                "These days it’s hard to find something that’s fully original and teams might not know an idea has been done before anyway.",
+                "Teams can use libraries, frameworks, or open-source code in their projects.",
+                " Working on a project before the event and open-sourcing it for the sole purpose of using the code during the event is against the spirit of the rules and is not allowed.",
+                "Adding new features to existing projects is allowed. Judges will only consider new functionality introduced or new features added during the hackathon in determining the winners.",
+                "Teams must stop hacking once the time is up. However, teams are allowed to debug and make small fixes to their programs after time is up. e.g. If during demoing your hack you find a bug that breaks your application and the fix is only a few lines of code, it's okay to fix that. Making large changes or adding new features is not allowed.",
+                "Projects that violate the Code of Conduct are not allowed. ",
+                "Teams can be disqualified from the competition at the organizers' discretion. Reasons might include but are not limited to breaking the Competition Rules, breaking the Code of Conduct, or other unsporting behaviour."
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "hackjudge",
+            "responses": [
+                "Teams will be judged on these criteria.",
+                "Judges will weigh the criteria equally. During judging, participants should try to describe what they did for each criterion in their project.",
+                " Judging criteria may vary, check the Devpost for the most up to date one.",
+                "Technology: How technically impressive was the hack? Was the technical problem the team tackled difficult? ",
+                "Did it use a particularly clever technique or did it use many different components? Did the technology involved make you go WOW?",
+                "Design: Did the team put thought into the user experience? How well designed is the interface? ",
+                "For a website, this might be about how beautiful the CSS or graphics are.",
+                " For a hardware project, it might be more about how good the human-computer interaction is (e.g. is it easy to use or does it use a cool interface?). ",
+                "Completion: Does the hack work? Did the team achieve everything they wanted? \n",
+                "Learning: Did the team stretch themselves? ",
+                "Did they try to learn something new?",
+                " What kind of projects have they worked on before?",
+                " If a team which always does virtual reality projects decides to switch up and try doing a mobile app instead, that exploration should be rewarded.",
+                "Open Source Best Practices: Did the team apply the Open Source best practices including, but not limited to, use of branches, pull requests, reviewing each other’s code, writing a comprehensive README, and using issues to track tasks.",
+                "Adherence to the Theme: Did this team actually create a project that fit the theme of the Hackathon? Did they solve a real problem in this space?"
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "hackdemo",
+            "responses": [
+                "After hacking finishes, teams will show their projects each other and to the judges.",
+                "You are strongly encouraged to present a demo of what you have built. Pitches or presentations are discouraged. ",
+                "You are not judged on the quality of your pitch or the quality of your idea.",
+                " As you are judged on what you built, you'll only hurt yourself by not showing a demo.",
+                "You are encouraged to present what you have done even if your hack is broken or you weren’t able to finish. ",
+                "It's okay if you didn't finish your hack—that happens all the time! Completion is only one part of the judging criteria, so you might still do well.",
+                " Also, demoing is not just about the competition. It's a chance to share with others what you learned and what you tried to build—that's what hacking's all about! ",
+                "In the case that you don't have anything to demo, you can give a presentation about what you tried and what you learned. ",
+                "Hearing what other people learned is interesting and inspiring for other attendees.",
+                "In addition to your live demo, you will be asked to record a video demo of your project for asynchronous judging and shared on MLH's livestream and social media."
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "attendance",
+            "responses": [
+                "MLH Fellows are expected to participate in all regularly scheduled activities for the duration of the Fellowship.",
+                " They are also expected to actively contribute and collaborate on projects as assigned by their Pod Leader and Mentor. ",
+                "Scheduled activities will include: Weekly Pod Meetings, Office Hours with Pod Leaders and Mentors, and Graduation.",
+                "In order to effectively collaborate with their pod, Fellows are asked to participate during typical daytime hours that match those of their pod.",
+                " This will typically be 10am - 6pm, Monday through Friday. However, each pod will set these individually based on where pod members live.",
+                " Regardless of time, Fellows will be required to attend the scheduled weekly planning conversations (Standup in technology industry parlance) with their Pod Leaders.",
+                "You can expect that time will be divided such that you are contributing to your assigned projects with the help of podmates, Pod Leader, and Mentor for about 3/4 of your hours each week and spending another 1/4 of those hours learning through other mechanisms such as educational workshops and participating in activities designed to lighten things up and have fun.",
+                "Fellows are expected to  actively participate in assignments with their pod, e.g. examining or contributing to open source or hackathon projects.",
+                " If there are situations where a Fellow must be absent or cannot participate, they must speak with their Pod Leader to find reasonable accommodations."
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "expectations",
+            "responses": [
+                "The Major League Hacking Code of Conduct applies to all fellows, mentors, maintainers, and MLH staff during the fellowship.",
+                " It applies on any platform the fellowship takes part in including chat, video, GitHub, events, and other communications. ",
+                "It further applies to any communication amongst Fellows over the duration of the program whether or not it is on a platform controlled by Major League Hacking. ",
+                "Simply put: if you’re interacting with other people involved in the MLH Fellowship during the program, the code of conduct applies.",
+                "Even when you’re not actively participating in the fellowship (e.g. after you’ve stopped coding for the day) your behavior reflects on Major League Hacking, the MLH Fellowship and the Hacker Community. ",
+                "As such, MLH may take action if Fellows are found to be doing something against this policy or the Code of Conduct outside of the Fellowship",
+                "We are dedicated to creating an inclusive environment for everyone. Consider that calling attention to differences can feel alienating. As a global program, you will be interacting with Fellows of different cultures and must understand that there may be cultural differences. ",
+                "Please ask questions where necessary and work to understand the various cultures of people in the program.",
+                "Any harassment, discrimination or abuse is never tolerated. Harassment includes but is not limited to offensive verbal or written comments related to race, ethnicity, nationality, religion, color, sex (with or without sexual conduct and including pregnancy and sexual orientation involving transgender status/gender identity, and sex-stereotyping), national origin, age, disability (physical or mental), genetic information, sexual orientation, gender identity, parental status, marital status, veteran status,",
+                "and political affiliation, gender expression, mental illness, socioeconomic status or background, neuro(a)typicality, physical appearance, body size, computing experience, or clothing, sexual images, deliberate intimidation, stalking, following, harassing photography or recording, sustained disruption",
+                " of talks or other events, inappropriate physical contact, and unwelcome sexual attention. ",
+                "If what you’re doing is making someone feel uncomfortable, that counts as harassment and is enough reason to stop doing it.",
+                "Any complaints should be handled, through the Major League Hacking Code of Conduct reporting policy. ",
+                "All reports will be investigated and addressed according to the MLH Incident Response Guide."
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "help",
+            "responses": [
+                "In cases where Fellows are believed by MLH in its sole discretion to have violated the expectations for behavior set forth by this handbook or the Code of Conduct,  MLH will take action as it sees fit in its educational and organizational judgment to address the issue. Corrective actions may include:",
+                "Written or Verbal Warning outlining the violation and how the participant can take action to resolve the issue.",
+                "Temporary Suspension from the Fellowship or Fellowship Activities.",
+                "Removal from Pod or transfer to another Pod.",
+                "Removal from the MLH Fellowship",
+                "Permanent Ban from all MLH activities.",
+                "If a Fellow is removed from the Fellowship for any reason, it is up to Major League Hacking’s discretion whether to continue or discontinue distribution of the educational stipend.",
+                "Nothing in this Handbook is intended to discourage or prevent a Fellow or other participant in the program from alerting law enforcement about another Fellow’s or participant’s actions or communications."
+            ],
+            "context_set": ""
+        }
+    ]
+}

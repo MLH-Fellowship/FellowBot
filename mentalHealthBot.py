@@ -6,6 +6,7 @@ import discord
 import requests
 from discord.ext import commands
 import random
+from keepalive import keepalive
 
 # enter token for the server
 from dotenv import load_dotenv
@@ -175,6 +176,9 @@ async def on_message(message):
     if 'quote' in msg.lower():
         response = get_qoute()
         await message.channel.send(response)
+
+# REPEATEDLY PING SERVER TO KEEP ALIVE
+keepalive()
 
 # ---------------------INITIALIZING THE BOT
 bot.run(TOKEN)
