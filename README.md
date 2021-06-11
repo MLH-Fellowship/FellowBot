@@ -1,6 +1,6 @@
 # FellowBot 🤖
 ### MLH kick-off hackathon Project - FellowBuddy Discord Bot
-
+#### Check out the FellowBot website [here](https://mlh-fellowship.github.io/FellowBot/)
 ## **Hi there ! :wave:**
 
 ![Cover](Fb.gif)
@@ -25,6 +25,7 @@ We understand how sometimes life in particular can be difficult and since we are
 The project is a discord bot with the following features:
 - 🧠 Mental health support - We understand how stressful it can be to manage everything and keep a positive attitude. Come talk to FellowBot about stress, life and unwanted feelings and it will help you!. Have difficulty managinng time? It will recommend you techniques to stay focused. Having a bad day? It will tell you a joke too!. Want motivation? Well, FellowBot will send you an inspiational quote too!.
 - ✨ Handbook scraping - We understand that you might not remember every page of the handbook but we also agree it is your best friend in this fellowship!. So, need to search for a particular page? Just type in a relevant keyword from our list of keywords and have the information directly in your discord. Say goodbye to searches again!
+- 📅 Next events - There are many events which fellows in MLH have to attend. Spending most of their time in Discord, there must be a way to get it directly there. Voila! Just use our FellowBot to get a list of a few ongoing/upcoming events.
 
 
 ## Techstack
@@ -33,6 +34,8 @@ The project is a discord bot with the following features:
 - 🥣 Beautiful Soup- To scrape the data beautifully.
 - 🛌 REST APIs - to fetch quotes and jokes for the fellows
 - 🐍 Python - The beautiful language to write our dynamic code.
+- 🎆 Google API: The calendar API for getting the events
+- 📄 GitHub Pages: For hosting the FellowBot wesbite
 
 ## Bot commands
 ### Functionality 1 -> answering your MLH handbook related questions
@@ -58,6 +61,9 @@ The project is a discord bot with the following features:
 ### Functionality 3 -> Emergency Hotline numbers 
 Use ![your emergency] to trigger out helper bot or just enter **!all** to get every helpline number.
 
+### Functionality 4 -> Get upcoming event(s) info
+Use !event [count] to get a list of the ongoing and upcoming events of the pod. Enter the count of events to retrieve following the command. It's default value is 1.
+
 ## Scalability 🌺
 The project can be scaled to fulfill huge possibilities. The current scalable paths comprise of :
 - Extending the functionality to make the bot more dynamic i.e. text summarization for cosine similarity between asked questions. This will enable us to make our bot more useful.
@@ -73,6 +79,11 @@ The project can be scaled to fulfill huge possibilities. The current scalable pa
 - Got to Discord Dev Portal -> Auth0  -> give the bots the rights to send messages -> copy the link which appears.
 - copy the link in your own browser and authorize the bot.
 - Voila! Your bot is ready!
+
+## Adding the bot to your server
+- Enter your server token in the FellowBot website to add the bot your server
+- Make a PR with your details in `Fellows.csv` to get access to confidential information restricted to MLH Fellows
+- Yippee! You are done.
 
 ## Contributing 👬
 Being open-source fellows, we used this opportunity to invite contributions from the whole MLH family!. The project is hence hosted as open source and you are welcome to make it more scalable and better !
