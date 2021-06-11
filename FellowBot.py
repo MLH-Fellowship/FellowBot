@@ -102,7 +102,22 @@ async def events(ctx, count='1'):
             # await ctx.send(event['description'])
 
 
-@bot.command(name='faq', help='Searches the FAQ for the most relevant section corresponding to the provided keyword. List of keywords: MLHintro, pod, MLHevents, discord, zoom, feedback, feedback, hackathonrules, hackjudge, hackdemo, attendance, expectations, help')
+@bot.command(name='faq', help="\
+    Searches the FAQ for the most relevant section corresponding to the provided keyword. List of keywords: \
+    - 😄 **MLHintro** - For in depth introduction to MLH fellowship. \
+    - 🌲 **MLHevents**- What are MLH events? Know everything about them. \
+    - 🚂 **pods** - What are pods? Know everything here \
+    - 📱 **discord** -How to use discord and which channel serves what purpose \
+    - 📞 **zoom**- What is zoom used for? \
+    - 📢 **feedback** - What is feedback in MLH? \
+    - ⏰ **remote** - How to work remotely and give your 100% in MLH. \
+    - 📏 **hackathonrules** - Rules for hackathons \
+    - 🥇 **hackjudge** - How do judges make a decision for hackathon winner? What is taken into consideration? \
+    - 💯 **hackdemo** - How to prepare a good demo for hackathon? \
+    - 🙋 **attendance** - What is the importance of attendance in MLH and how is it monitored?\
+    - 💁 **expectations** - What MLH expects from you as fellows\
+    - ⛑️ **help** - Facing problems in MLH? Reach out to us\
+")
 async def faq(ctx, keyword):
     for i in scraped["intents"]:
         if(keyword==i["tag"]):
