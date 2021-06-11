@@ -9,22 +9,18 @@ from google.oauth2.credentials import Credentials
 
 import json
 import os
-import discord
 import requests
 from discord.ext import commands
 import random
 from keepalive import keepalive
 
-# enter token for the server
-TOKEN = os.environ['DISCORD_TOKEN']
-
-# client = commands.Bot(command_prefix='.')
-
-import discord
 from discord.ext import commands
-# from dotenv import load_dotenv
-# load_dotenv()
-# TOKEN = os.getenv('DISCORD_TOKEN')
+# enter token for the server
+# TOKEN = os.environ['DISCORD_TOKEN'] # to use in repl
+
+from dotenv import load_dotenv
+load_dotenv()
+TOKEN = os.getenv('DISCORD_TOKEN')  # for dev purpose
 
 # If modifying these scopes, delete the file token.json.
 SCOPES = ['https://www.googleapis.com/auth/calendar.readonly']
@@ -33,7 +29,7 @@ SCOPES = ['https://www.googleapis.com/auth/calendar.readonly']
 # ---------------------BOT COMMAND
 bot = commands.Bot(command_prefix='!')
 # ---------------------WEB SCRAPING
-scraping = open("ok.json", encoding="UTF-8")
+scraping = open("faq.json", encoding="UTF-8")
 scraped = json.load(scraping)
 # ----------------FOR HELPLINE
 helplines = ["Family Violence Prevention Center 1-800-313-1310",
@@ -44,7 +40,7 @@ helplines = ["Family Violence Prevention Center 1-800-313-1310",
              "GriefShare 1-800-395-5755",
              "Suicide Hotline 1-800-SUICIDE (784-2433)"]
 
-@bot.command(aliases=['event', 'nextevent', 'nextevents', 'upcomingevent', 'upcomingevents'], help='Get a list of the ongoing and upcoming events of the pod')
+@bot.command(aliases=['event', 'nextevent', 'nextevents', 'upcomingevent', 'upcomingevents'], help='Get a list of the ongoing and upcoming events of the pod. Enter the count of events to retrieve following the command. It\'s default value is 1.')
 async def events(ctx, count='1'):
     creds = None
     # The file token.json stores the user's access and refresh tokens, and is
@@ -106,7 +102,7 @@ async def events(ctx, count='1'):
             # await ctx.send(event['description'])
 
 
-@bot.command(name='faq', help='Searches the FAQ for the most relevant section corresponding to the provided keyword.')
+@bot.command(name='faq', help='Searches the FAQ for the most relevant section corresponding to the provided keyword. List of keywords: MLHintro, pod, MLHevents, discord, zoom, feedback, feedback, hackathonrules, hackjudge, hackdemo, attendance, expectations, help')
 async def faq(ctx, keyword):
     for i in scraped["intents"]:
         if(keyword==i["tag"]):
@@ -117,37 +113,37 @@ async def faq(ctx, keyword):
         await ctx.send(response)
 
 
-@bot.command(aliases=['al'])
+@bot.command(aliases=['al'], help="Get all helpline numbers related to mental health")
 async def all(ctx):
     for i in helplines:
         res = i
         await ctx.send(res)
 
-@bot.command(aliases=['depression'])
+@bot.command(aliases=['depression'], help="Get helpline number to tackle depression and suicidal thoughts")
 async def suicide(ctx):
     await ctx.send(helplines[6])
 
-@bot.command(aliases=['violenT'])
+@bot.command(aliases=['violent'], help="Get helpline number to tackle violence")
 async def violence(ctx):
     await ctx.send(helplines[0])
 
-@bot.command(aliases=['drugs'])
+@bot.command(aliases=['drugs'], help="Get helpline number to tackle drug addiction")
 async def drugabuse(ctx):
     await ctx.send(helplines[2])
 
-@bot.command(aliases=['assault'])
+@bot.command(aliases=['assault'], help="Get helpline number to tackle assaults")
 async def sexualAssault(ctx):
     await ctx.send(helplines[1])
 
-@bot.command(aliases=['ILLNESS'])
+@bot.command(aliases=['ILLNESS'], help="Get helpline number to tackle illness")
 async def cancer(ctx):
     await ctx.send(helplines[3])
 
-@bot.command(aliases=['grie'])
+@bot.command(aliases=['sorrow'], help="Get helpline number to tackle grief")
 async def grief(ctx):
     await ctx.send(helplines[5])
 
-@bot.command(aliases=['eating'])
+@bot.command(aliases=['eating'], help="Get helpline number to tackle eating disorder")
 async def eatingdisorder(ctx):
     await ctx.send(helplines[4])
 
