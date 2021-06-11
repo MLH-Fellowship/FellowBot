@@ -12,7 +12,6 @@ from dotenv import load_dotenv
 load_dotenv()
 TOKEN = os.getenv('DISCORD_TOKEN')
 # enter application id
-GUILD = ''
 
 # client = commands.Bot(command_prefix='.')
 
