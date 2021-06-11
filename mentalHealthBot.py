@@ -8,7 +8,9 @@ from discord.ext import commands
 import random
 
 # enter token for the server
-TOKEN = ''
+from dotenv import load_dotenv
+load_dotenv()
+TOKEN = os.getenv('DISCORD_TOKEN')
 # enter application id
 GUILD = ''
 
@@ -177,4 +179,3 @@ async def on_message(message):
 
 # ---------------------INITIALIZING THE BOT
 bot.run(TOKEN)
-
