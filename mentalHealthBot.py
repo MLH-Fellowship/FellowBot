@@ -9,8 +9,6 @@ import random
 from keepalive import keepalive
 
 # enter token for the server
-from dotenv import load_dotenv
-load_dotenv()
 TOKEN = os.getenv('DISCORD_TOKEN')
 # enter application id
 
