@@ -15,12 +15,6 @@ from discord.ext import commands
 import random
 from keepalive import keepalive
 
-"""
-# DEBUG
-for key in os.environ:
-   print (key)
-"""
-
 # enter token for the server
 TOKEN = os.environ['DISCORD_TOKEN']
 
