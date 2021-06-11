@@ -127,3 +127,7 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+google-calendar-quickstart.py
+credentials.json
+token.json
+ok.json
