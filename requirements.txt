@@ -17,6 +17,8 @@ clikit==0.4.3
 cryptography==3.4.7
 cs50==6.0.4
 cycler==0.10.0
+discord==1.0.1
+discord.py==1.7.2
 google-api-core==1.30.0
 google-api-python-client==2.8.0
 google-auth==1.30.1
