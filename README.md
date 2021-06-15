@@ -93,3 +93,5 @@ We agree that the handbook should be of use to the MLH fellows hence the bot sho
 
 ## What we are proud of ? 🥳
 Since none of us had any idea about creating Discord bot, the hard work we have put in and the hours we spent on coding made us believe what we as a team can do. Even though we were running late by 2 days, we still decided to start a new project from scratch since it was more useful and ambitious. The experience was thrilling and we had/still having fun coding the project !
+
+Created by Jyoti Bisht, Saurabh Agarwala and George A. McCarthy as part of the MLH summer 2021 orientation week hackathon.
