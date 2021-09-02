@@ -46,14 +46,53 @@ positivereply = [
     "We are extremely sorry to hear that you feel like this , but you are not alone in this. We as MLH put your well being as the top priority. Come talk to us what is bothering you. Help is available, speak with a counselor today by calling the National Suicide Prevention Lifeline at 800-273-8255",
     "WE ARE THERE FOR YOU!!. When you think life isn't worth it, search for some new options. Help is available, speak with a counselor today by calling the National Suicide Prevention Lifeline at 800-273-8255"
 ]
+
+
+
+# ------> function zone 
+def jokes()
+    url = "https://v2.jokeapi.dev/joke/Programming,Miscellaneous,Christmas?blacklistFlags=nsfw,political,racist,sexist,explicit&type=twopart"
+    res = RestClient.get(url)
+    res = JSON.parse(res)
+    puts(res)
+    joke= ""
+    joke= res["setup"] + "  -  " + res["delivery"]
+    return joke
+end 
+
+
+def quotes()
+    url = "https://zenquotes.io/api/random"
+    res = RestClient.get(url)
+    json_data = JSON.parse(res)
+    quote = ""
+    quote = json_data[0]['q'] + " -" + json_data[0]['a']
+    return quote
+end
+
+
+# ------> function zone ends 
+
+# -------> command zone 
 bot.command :ping do |msg|
     msg.respond "pong."
 end 
 
 bot.command :test do |event|
-    event.respond helplines[0]
+    event.respond helplines.sample
 end
 
+
+bot.command :jokes do |event|
+    event.respond jokes()
+end 
+
+bot.command :quote do |event|
+    event.respond quotes()
+end 
+
+# ----------> command zone ends
+# ----- game section
 bot.message(start_with: '!game') do |event|
 
     magic = rand(1..10)
@@ -73,7 +112,30 @@ bot.message(start_with: '!game') do |event|
     event.respond "My number was: `#{magic}`."
   end
   
-  
+# --------> trivial msg section
+if bot.message(contains: sad_words) do |event|
+    event.respond positivereply.sample
+    event.respond "here is a joke to make you feel better"
+    event.respond jokes()
+    end
+end 
+
+if bot.message(contains: greetings) do |event|
+    event.respond greet.sample
+    end
+end
+
+if bot.message(contains: problems) do |event|
+    event.respond copeup.sample
+    end
+end 
+
+if bot.message(contains: suicide ) do |event|
+    event.respond positivereply.sample
+    end
+end 
+
+# ------> time zone section
 CROSS_MARK = "\u274c"
   
   
@@ -85,50 +147,16 @@ bot.message(content: '!time') do |event|
       message.delete 
     end
     puts 'Await destroyed.'
-  end
+end
   
-bot.message(contains: sad_words) do |event|
-    event.respond 
-end 
+# ------÷ exit bot section
+bot.command(:exit, help_available: false) do |event|
+    break unless event.user.id == 882697654348447774
+    bot.send_message(event.channel.id, 'Bot is shutting down')
+    exit
+end
+  
 bot.run
 
-# @bot.event
-# async def on_message(message):
-#     flag = False
-#     gify = False
-#     await bot.process_commands(message)
-#     msg = message.content
-#     if message.author == bot.user:
-#         return
-#     if any(word in msg for word in greetings):
-#         gify = True
-#         response = random.choice(greet)
-#         await message.channel.send(response)
-
-#     if any(word in msg for word in sad_words):
-#         flag = True
-#         response = random.choice(starter_encouragements)
-#         await message.channel.send(response)
-
-#     if any(word in msg for word in problems):
-#         flag = True
-#         response = random.choice(copeup)
-#         await message.channel.send(response)
-
-#     if any(word in msg for word in suicide):
-#         flag = True
-#         response = random.choice(positivereply)
-#         await message.channel.send(response)
-
-#     if(flag):
-#         r1 = "And just to brighten your day, here is a joke for you"
-#         await message.channel.send(r1)
-#         r2 = joke()
-#         await message.channel.send(r2)
-
-#     if 'quote' in msg.lower():
-#         response = get_qoute()
-#         await message.channel.send(response)
 
 
-# @bot.command(name='faq', help="\
