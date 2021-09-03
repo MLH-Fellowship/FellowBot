@@ -98,8 +98,6 @@ def update_announcement_list():
 
 
 def tone_response(tone, language="en"):
-    # Switch statements couldn't come fast enough
-    # TODO Switch statements on Python 3.10 release
     if tone:
         if tone == -1:
             return -1
@@ -119,8 +117,7 @@ def tone_response(tone, language="en"):
 
 def joy_response(language):
     embed = discord.Embed(
-        # Translate Title, if Language is English, Google Translate will not alter the string
-
+        
         title=google_translate("It sounds like you're having an awesome day!", language)["translatedText"],
         description=google_translate("""Happiness looks different for everyone, but it is often described as involving """ + 
         """positive emotions and life satisfaction. Perhaps you've had a rough few days and things have just started """ +
@@ -291,10 +288,7 @@ async def ping(ctx):
 
 @bot.command(pass_context=True)
 async def checkin(ctx, *, message=None):
-    """
-    Determines the user's mood by using IBM Watson's tone reader & Google Cloud's Natural Language Library
-    and uploads it to the database.
-    """
+    
     if message:
         translate = google_translate(message)
         translation = translate["translatedText"]
@@ -319,10 +313,7 @@ async def checkin(ctx, *, message=None):
 
 @bot.command(pass_context=True)
 async def rate(ctx, *, message=None):
-    """
-    When the tone reader fails to determine a mood, the user can
-    simply enter their mood and update the database with their mood
-    """
+    
     if message:
         rating = message.strip().lower()
         if rating in ["anger", "fear", 'joy', 'sadness']:
@@ -494,18 +485,14 @@ async def on_ready():
 
 @tasks.loop(hours=1)
 async def reload_tokens():
-    """
-    refreshes Reddit & Watson access token every hour
-    """
+   
     refresh_reddit_token()
     reload_watson_api()
 
 
 @tasks.loop(hours=24)
 async def checkin_announcement():
-    """
-    Sends a reminder every 24 hours to users to remind them to checkin and track their mood
-    """
+    
     day_of_week = datetime.datetime.today().weekday()
     for channel in announcement_channels_list:
         embed = discord.Embed(title=f"⭐ Happy {days_of_the_week[day_of_week]}! ⭐",
