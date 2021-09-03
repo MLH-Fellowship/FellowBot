@@ -10,7 +10,7 @@ Talk 💠 Get help 💠 Scrape!
 
 ## Note : Ruby version of this bot resides in ./fellowbot.rb file
 ## Note : movierecsys feature of the discord bot can be found in this [repo](https://github.com/joeyouss/Movierecsys_Joebot)
-
+## Note : sentimental analysis to make bot more dynamic is now supported.
 ### **This is FellowBot - an MLH kickoff project, a bot and your friend!.**
 
 We understand how sometimes life in particular can be difficult and since we are now MLH Fellows, we thought of making something which can be used by every fellow in the server and which makes their life easy.
