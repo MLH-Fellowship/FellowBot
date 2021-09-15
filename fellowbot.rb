@@ -202,7 +202,12 @@ bot.message(start_with: '!game') do |event|
   
 # --------> trivial msg section
 
-
+if bot.message(contains: "intro") do |event|
+    for i in MLH_keys do
+        event.respond i 
+    end
+end 
+end 
 if bot.message(contains: sad_words) do |event|
     event.respond positivereply.sample
     event.respond "here is a joke to make you feel better"
